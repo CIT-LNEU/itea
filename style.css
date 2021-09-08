@@ -1,0 +1,16 @@
+.navbar {
+	background-color: white;
+}
+
+.navbar-element {
+	color: #1C6728;
+}
+
+.active {
+	background-color: #1C6728;
+	color: white;
+}
+
+.active a{
+	color: white;
+}
