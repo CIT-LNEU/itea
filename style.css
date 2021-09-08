@@ -104,7 +104,7 @@ div.page-container-inner {
 	top: 0;
 	width: 100%;
 	padding-left: 10%;
-	border-bottom: 3px solid #009E2D;
+	border-bottom: 3px solid #1C6728;
 	overflow: hidden;
 	background-color: white;
 }
@@ -118,13 +118,13 @@ div.page-container-inner {
 	font-size: 18px;
 	line-height: 25px;
 	background-color: white;
-	color: #009E2D;
+	color: #1C6728;
 	padding-right: 20px;
 	padding-left: 20px;
 }
 
 .menu_button:hover {
-	background-color: #009E2D;
+	background-color: #1C6728;
 	color: white;
 	transition: 0.3s;
 }
@@ -145,7 +145,7 @@ div.page-container-inner {
 
 #lang_current
 {
-	color: #009E2D;
+	color: #1C6728;
 	margin-top: 13px;
 	margin-left: 6px;
 	margin-right: 10px;
@@ -156,7 +156,7 @@ div.page-container-inner {
 }
 
 #lang_switcher:hover {
-	background-color: #009E2D;
+	background-color: #1C6728;
 	transition: 0.3s;
 }
 
@@ -189,7 +189,7 @@ div.page-container-inner {
 
 #title {
 	width: 50%;
-	height: 15%;
+	height: 8%;
 	position: absolute;
 	top: 200px;
 	float: right;
@@ -250,7 +250,7 @@ div.page-container-inner {
 	font-size: 1.6em;
 	padding-left: 2%;
 	padding-bottom: 2%;
-	border-bottom: 3px solid #009E2D;
+	border-bottom: 3px solid #1C6728;
 }
 
 .banner {
@@ -275,7 +275,7 @@ div.page-container-inner {
 	text-align: center;
 	text-decoration: none;
 	line-height: 25px;
-	color: #009E2D;
+	color: #1C6728;
 	font-size: 18px;
 	display: inline-block;
 	padding: 16px;
@@ -286,6 +286,6 @@ div.page-container-inner {
 
 #invitation > a:hover {
 	transition: 0.3s;
-	background-color: #009E2D;
+	background-color: #1C6728;
 	color: white;
 }
