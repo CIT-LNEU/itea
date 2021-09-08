@@ -4,19 +4,19 @@ $(document).ready(function (){
 
 	$("#about_button").click(function(){
 		$('html, body').animate({
-			scrollTop: $('#about_banner').offset().top
+			scrollTop: $('#about_banner').offset().top - 40
 		}, 200);
 	});
 
 	$("#organizers_button").click(function(){
 		$('html, body').animate({
-			scrollTop: $('#organizers_banner').offset().top
+			scrollTop: $('#organizers_banner').offset().top - 40
 		}, 200);
 	});
 
 	$("#materials_button").click(function(){
 		$('html, body').animate({
-			scrollTop: $('#materials_banner').offset().top
+			scrollTop: $('#materials_banner').offset().top - 40
 		}, 200);
 	});
 
@@ -29,11 +29,11 @@ $(document).ready(function (){
 		$('[lang="en"]').toggle();
 		if (sw === 0) {
 			sw = 1;
-			document.getElementById("lang_current").textContent = "UKR";
+			document.getElementById("lang_current").textContent = "UA";
 		}
 		else {
 			sw = 0;
-			document.getElementById("lang_current").textContent = "ENG";
+			document.getElementById("lang_current").textContent = "EN";
 		}
 	});
 
@@ -47,7 +47,7 @@ $(document).ready(function (){
 
 	$("#lang_switcher").mouseleave(function(){
 		$("#lang_current").css("transition", "0s");
-		$("#lang_current").css("color", "#009E2D");
+		$("#lang_current").css("color", "#1C6728");
 
 		$("#lang_ico").attr('src',"images/lang_icon_green.png");
 		$("#lang_ico").css("transition", "0s");
