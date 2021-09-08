@@ -190,6 +190,14 @@ div.page-container-inner {
 	background-color: rgba(255, 255, 255, 0.85);
 }
 
+.subtitle {
+	font-size: 1.4em;
+	margin-bottom: 1%;
+	margin-left: 30px;
+	color: #1C6728;
+	
+}
+
 #logo {
 	padding-top: 4%;
 	max-width: 195px;
@@ -249,7 +257,7 @@ div.page-container-inner {
 	margin-top: 1%;
 	font-size: 1.6em;
 	color: white;
-	padding-left: 1%;
+	padding-left: 30px;
 	padding-bottom: 1%;
 	padding-top: 1%;
 	background-color: #1C6728;
