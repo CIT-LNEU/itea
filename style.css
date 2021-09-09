@@ -272,6 +272,10 @@ div.page-container-inner {
 	padding-bottom: 1%;
 	padding-top: 1%;
 	background-color: #1C6728;
+	background: -webkit-linear-gradient(left, 
+    #1C6728 40%,
+    rgba(255,255,255,0.9) 100%
+  );
 }
 
 .banner {
