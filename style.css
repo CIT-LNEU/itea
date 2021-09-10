@@ -285,6 +285,13 @@ div.page-container-inner {
 	padding-bottom: 20px;
 }
 
+li {
+	padding-left: 26px;
+  margin-left: 28px;
+  margin-bottom: 4px;
+  padding-left: 0;
+}
+
 #title_banner section {
 	display: table-cell;
 	vertical-align: middle;
