@@ -183,7 +183,7 @@ div.page-container-inner {
 #title {
 
 	width: 50%;
-	height: 8%;
+	height: 250px;
 	position: absolute;
 	top: 200px;
 	float: right;
@@ -292,7 +292,7 @@ li {
   padding-left: 0;
 }
 
-ol {
+ol, ul {
   list-style: none;
   counter-reset: counter;
 }
@@ -313,6 +313,13 @@ ol li::before {
   margin-right: 4px;
 }
 
+ul li{
+margin-left: 26px;
+}
+
+span {
+	color: #1C6728;
+}
 .banner a {
 	margin-top: 40px;
 	padding: 20px;
@@ -327,4 +334,8 @@ ol li::before {
 	transition: 0.3s;
 	background-color: #1C6728;
 	color: white;
+}
+
+iframe {
+	margin-top: 20px;
 }
