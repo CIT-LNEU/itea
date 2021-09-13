@@ -108,7 +108,7 @@ div.page-container-inner {
 	text-align: center;
 	padding: 12px;
 	text-decoration: none;
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 25px;
 	background-color: white;
 	color: #1C6728;
@@ -334,6 +334,6 @@ iframe {
 }
 
 a:not(#lang_current, .menu_button), p, li {
-	font-size: 18px;
+	font-size: 20px;
 	font-family: 'SourceSansPro Regular';
 }
