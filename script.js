@@ -35,7 +35,7 @@ $(document).ready(function (){
 		var sw = true;
 	}
 	
-	$('#lang_switcher').click(function() {
+	$('#lang_current').click(function() {
 		$('[lang="ua"]').toggle();
 		$('[lang="en"]').toggle();
 		if (sw === false) {
@@ -46,21 +46,5 @@ $(document).ready(function (){
 			sw = false;
 			document.getElementById("lang_current").textContent = "UA";
 		}
-	});
-
-	$("#lang_switcher").mouseover(function(){
-		$("#lang_current").css("transition", "0.3s");
-		$("#lang_current").css("color", "white");
-
-		$("#lang_ico").attr('src',"images/lang_icon_white.png");
-		$("#lang_ico").css("transition", "0.3s");
-	});
-
-	$("#lang_switcher").mouseleave(function(){
-		$("#lang_current").css("transition", "0s");
-		$("#lang_current").css("color", "#1C6728");
-
-		$("#lang_ico").attr('src',"images/lang_icon_green.png");
-		$("#lang_ico").css("transition", "0s");
 	});
 });
