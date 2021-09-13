@@ -62,19 +62,11 @@ table {
 }
 
 @font-face {
-	font-family: 'NotoSansKR Regular';
-	src: url('fonts/Arimo-Regular.ttf');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
 	font-family: 'SourceSansPro Regular';
 	src: url('fonts/SourceSansPro-Regular.ttf');
 	font-weight: normal;
 	font-style: bold;
 }
-
 
 body {
 	position: relative;
