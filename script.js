@@ -22,18 +22,29 @@ $(document).ready(function (){
 
 	//Translate the site
 
-	$('[lang="ua"]').hide();
-	var sw = 0;
+	if (/^uk\b/.test(navigator.language) || /^ru\b/.test(navigator.language))
+	{
+		$('[lang="en"]').hide();
+		document.getElementById("lang_current").textContent = "UA";
+		var sw = false;
+	}
+	else
+	{
+		$('[lang="ua"]').hide();
+		document.getElementById("lang_current").textContent = "EN";
+		var sw = true;
+	}
+	
 	$('#lang_switcher').click(function() {
 		$('[lang="ua"]').toggle();
 		$('[lang="en"]').toggle();
-		if (sw === 0) {
-			sw = 1;
-			document.getElementById("lang_current").textContent = "UA";
+		if (sw === false) {
+			sw = true;
+			document.getElementById("lang_current").textContent = "EN";
 		}
 		else {
-			sw = 0;
-			document.getElementById("lang_current").textContent = "EN";
+			sw = false;
+			document.getElementById("lang_current").textContent = "UA";
 		}
 	});
 
