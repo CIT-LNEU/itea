@@ -164,7 +164,6 @@ div.page-container-inner {
 	font-family: 'SourceSansPro Regular';
 	font-size: 2.4em;
 	font-weight: 300;
-	margin: 2%;
 	text-align: right;
 }
 
@@ -178,6 +177,7 @@ div.page-container-inner {
 	color: white;
 	background-image: url(images/image-banner.jpg);
 	background-position: bottom;
+	margin-bottom: 40px;
 }
 
 #title {
@@ -191,11 +191,15 @@ div.page-container-inner {
 	padding: 2%;
 	background-color: rgba(255, 255, 255, 0.85);
 }
+ {
+	align-items: center;
+}
 
 .subtitle {
 	font-size: 1.4em;
 	margin-bottom: 1%;
 	color: #1C6728;
+	margin-top: 32px;
 }
 
 .subtitle span {
@@ -203,14 +207,13 @@ div.page-container-inner {
     #BEDBC3 0%,
     rgba(255,255,255,0.9) 100%
   );
-  padding-left: 30px;
+  padding-left: 26px;
   padding-right: 30px;
   padding-top: 0.4%;
   padding-bottom: 0.4%;
 }
 
 #logo {
-	padding-top: 4%;
 	max-width: 195px;
 }
 
@@ -264,11 +267,10 @@ div.page-container-inner {
 }
 
 .banner_title {
-	margin-bottom: 1%;
-	margin-top: 1%;
+	margin-bottom: 24px;
 	font-size: 1.6em;
 	color: white;
-	padding-left: 30px;
+	padding-left: 26px;
 	padding-bottom: 1%;
 	padding-top: 1%;
 	background-color: #1C6728;
@@ -280,43 +282,48 @@ div.page-container-inner {
 
 .banner {
 	margin-top: 3%;
-	margin-bottom: 3%;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	margin-bottom: 40px;
 }
 
 li {
 	padding-left: 26px;
-  margin-left: 28px;
+  margin-left: 0px;
   margin-bottom: 4px;
   padding-left: 0;
 }
 
-#title_banner section {
-	display: table-cell;
-	vertical-align: middle;
+ol {
+  list-style: none;
+  counter-reset: counter;
 }
 
-#invitation h4 {
-	margin: 3%;
-	font-family: OpenSans Regular;
+ol li {
+  counter-increment: counter;
 }
 
-#invitation a {
-	position: absolute;
-	text-align: center;
-	text-decoration: none;
-	line-height: 25px;
+ol li::before {
+  content: counter(counter) ". ";
+  color: #1C6728;
+  font-weight: bold;
+  background: -webkit-linear-gradient(left, 
+    #BEDBC3 0%,
+    rgba(255,255,255,0.9) 100%
+  );;
+  padding-left: 6px;
+  margin-right: 4px;
+}
+
+.banner a {
+	margin-top: 40px;
+	padding: 20px;
 	color: #1C6728;
 	font-size: 18px;
-	display: inline-block;
-	padding: 16px;
 	cursor: pointer;
 	font-family: Roboto, sans-serif;
 	font-weight: 600;
 }
 
-#invitation > a:hover {
+.banner > a:hover {
 	transition: 0.3s;
 	background-color: #1C6728;
 	color: white;
