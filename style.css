@@ -279,9 +279,10 @@ div.page-container-inner {
 @media screen and (orientation: portrait) {
 	.banner_title {
 		background: -webkit-linear-gradient(left,
-    #1C6728 70%,
-    rgba(255,255,255,0.9) 130%
-  );
+    	#1C6728 75%,
+    	rgba(255,255,255,0.9) 135%
+  	);
+		padding-right: 26px;
 	}
 }
 
