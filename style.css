@@ -308,6 +308,7 @@ ol li {
 }
 
 ol li::before {
+	font-size: 20px;
   content: counter(counter) ". ";
   display: inline-block;
   color: #1C6728;
