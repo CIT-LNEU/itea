@@ -309,20 +309,20 @@ ol li {
 
 ol li::before {
 	font-size: 20px;
-  content: counter(counter) ". ";
-  display: inline-block;
-  color: #1C6728;
-  font-weight: bold;
-  background: -webkit-linear-gradient(left, 
-    #BEDBC3 0%,
-    rgba(255,255,255,0.9) 100%
-  );;
-  padding-left: 6px;
-  margin-right: 4px;
+	content: counter(counter) ". ";
+	display: inline-block;
+	color: #1C6728;
+	font-weight: bold;
+	background: -webkit-linear-gradient(left, 
+		#BEDBC3 0%,
+		rgba(255,255,255,0.9) 100%
+	);;
+	padding-left: 6px;
+	margin-right: 4px;
 }
 
 ul li {
-margin-left: 26px;
+	margin-left: 26px;
 }
 
 span {
