@@ -219,7 +219,6 @@ div.page-container-inner {
 }
 
 .organizer img {
-	height: 100px;
 	width: 100px;
 	margin: 2%;
 	float: left;
@@ -228,7 +227,7 @@ div.page-container-inner {
 .organizer h4 {
 	font-family: 'Montserrat Bold';
 	font-size: 18px;
-	padding: 7px;
+	padding: 0 0 7px;
 	word-wrap: normal;
 }
 
@@ -239,13 +238,18 @@ div.page-container-inner {
 }
 
 .organizer div {
-	padding: 3%;
-	vertical-align: top;
+	padding-top: 2%;
+	vertical-align: middle;
+}
+
+.organizer a {
+	color: #1C6728;
+	text-decoration: none;
 }
 
 .organizer {
-	min-width: 46%;
-	max-height: 180px;
+	display: table;	
+	height: 180px;
 	background-color: white;
 }
 
@@ -329,7 +333,7 @@ span {
 	color: #1C6728;
 }
 
-.banner a {
+#banner a:not(h4 a) {
 	margin-top: 40px;
 	padding: 20px;
 	color: #1C6728;
@@ -348,7 +352,7 @@ iframe {
 	margin-top: 20px;
 }
 
-a:not(#lang_current, .menu_button), p, li {
+a:not(#lang_current, .menu_button, h4 a), p, li {
 	font-size: 20px;
 	font-family: 'SourceSansPro Regular';
 }
