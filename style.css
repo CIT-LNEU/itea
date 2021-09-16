@@ -264,49 +264,10 @@ div.page-container-inner {
 	position: relative;
 }
 
-#lnau img {
-	width: 100px;
-	padding-top: 16px;
-	padding-bottom: 16px;
-	margin-left: 26px;
-	float: left;
-	position: absolute;
-	top: 50%;
-	-ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-#lnau h4 {
-	font-family: 'Montserrat Bold';
-	font-size: 18px;
-	padding: 4px 0 7px;
-	padding-right: 20px;
-	word-wrap: normal;
-}
-
-#lnau p {
-	font-family: 'SourceSansPro Regular';
-	font-size: 18px;
-	margin-bottom: 1%;
-}
-
-#lnau div {
-	position: absolute;
-	margin-left: 140px;
-	position: absolute;
-	top: 50%;
-	-ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-#lnau {
-	display: grid;
-	height: 132px;
-	background-color: white;
-	position: relative;
-}
-
 #organizers {
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-top: 2%;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(470px, 1fr));
 }
