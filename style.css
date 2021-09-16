@@ -187,9 +187,9 @@ div.page-container-inner {
 .subtitle {
 	font-family: 'Montserrat Bold';
 	font-size: 22px;
-	margin-bottom: 1%;
+	margin-bottom: 26px	;
 	color: #1C6728;
-	margin-top: 32px;
+	margin-top: 42px;
 }
 
 .subtitle span {
@@ -214,10 +214,9 @@ div.page-container-inner {
 .info {
 	margin-top: 2%;
 	margin-bottom: 2%;
-	text-indent: 26px;
 }
 
-.organizer img {
+.organizer img, .partner img {
 	width: 100px;
 	padding-top: 16px;
 	padding-bottom: 16px;
@@ -229,7 +228,7 @@ div.page-container-inner {
   transform: translateY(-50%);
 }
 
-.organizer h4 {
+.organizer h4, .partner h4 {
 	font-family: 'Montserrat Bold';
 	font-size: 18px;
 	padding: 4px 0 7px;
@@ -237,13 +236,13 @@ div.page-container-inner {
 	word-wrap: normal;
 }
 
-.organizer p {
+.organizer p, .partner p {
 	font-family: 'SourceSansPro Regular';
 	font-size: 18px;
 	margin-bottom: 1%;
 }
 
-.organizer div {
+.organizer div, .partner div {
 	position: absolute;
 	margin-left: 140px;
 	position: absolute;
@@ -252,24 +251,24 @@ div.page-container-inner {
   transform: translateY(-50%);
 }
 
-.organizer a {
+.organizer a, .partner a {
 	color: #1C6728;
 	text-decoration: none;
 }
 
-.organizer {
+.organizer, .partner {
 	display: table;
 	height: 132px;
 	background-color: white;
 	position: relative;
 }
 
-#organizers {
+#organizers, #partners {
 	margin-left: 2%;
 	margin-right: 2%;
 	margin-top: 2%;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(470px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(470px, 50%));
 }
 
 .banner_title {
@@ -340,7 +339,7 @@ ul li {
 	margin-left: 26px;
 }
 
-span {
+li span {
 	color: #1C6728;
 }
 
@@ -353,12 +352,6 @@ span {
 	font-weight: 600;
 }
 
-.banner > a:hover {
-	transition: 0.3s;
-	background-color: #1C6728;
-	color: white;
-}
-
 iframe {
 	margin-top: 20px;
 }
@@ -366,4 +359,50 @@ iframe {
 a:not(#lang_current, .menu_button, h4 a), p, li {
 	font-size: 20px;
 	font-family: 'SourceSansPro Regular';
+}
+
+a:not(#lang_current, .menu_button, h4 a), p {
+	margin-left: 26px;
+}
+
+#contact_banner p, #developer p {
+	margin-bottom: 4px;
+}
+
+.person p:first-of-type {
+	font-family: 'Montserrat Bold';
+	margin-bottom: 4px;
+}
+
+.person {
+	margin-bottom: 20px;
+}
+
+#persons {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(320px, 33%));
+}
+
+@media screen and (max-width: 1084px) and (orientation: landscape){
+		#persons {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(320px, 100%));
+	}
+}
+
+#contact_banner a {
+	line-height: 40px;
+	margin: 26px;
+	text-decoration: none;
+	color: #1C6728;
+}
+
+#contact_banner a:hover {
+	background-color: #1C6728;
+	color: white;
+	transition: 0.3s;
+}
+
+#developer p:nth-of-type(1), #developer p:nth-of-type(2), #developer p:nth-of-type(3) {
+	font-family: 'Montserrat Bold';
 }
