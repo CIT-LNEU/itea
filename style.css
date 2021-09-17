@@ -101,7 +101,7 @@ div.page-container-inner {
 }
 
 /* Style the header buttons */
-.menu_button {
+.header a {
 	font-family: 'Montserrat Bold';
 	float: left;
 	text-align: center;
@@ -113,9 +113,16 @@ div.page-container-inner {
 	color: #1C6728;
 	padding-right: 20px;
 	padding-left: 20px;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.menu_button:hover {
+.header a:hover {
 	background-color: #1C6728;
 	color: white;
 	transition: 0.3s;
@@ -356,12 +363,12 @@ iframe {
 	margin-top: 20px;
 }
 
-a:not(#lang_current, .menu_button, h4 a), p, li {
+a:not(#lang_current, .header a, h4 a), p, li {
 	font-size: 20px;
 	font-family: 'SourceSansPro Regular';
 }
 
-a:not(#lang_current, .menu_button, h4 a), p {
+a:not(#lang_current, .header a, h4 a), p {
 	margin-left: 26px;
 	text-align: justify;
 }
@@ -398,14 +405,14 @@ a:not(#lang_current, .menu_button, h4 a), p {
 	}
 }
 
-#contact_banner a {
+#contact_banner a, #developer a {
 	line-height: 40px;
 	margin: 26px;
 	text-decoration: none;
 	color: #1C6728;
 }
 
-#contact_banner a:hover {
+#contact_banner a:hover, #developer a:hover {
 	background-color: #1C6728;
 	color: white;
 	transition: 0.3s;
@@ -414,3 +421,9 @@ a:not(#lang_current, .menu_button, h4 a), p {
 #developer p:nth-of-type(1), #developer p:nth-of-type(2), #developer p:nth-of-type(3) {
 	font-family: 'Montserrat Bold';
 }
+
+.wip {
+	color: #1C6728;
+	margin: 26px;
+}
+

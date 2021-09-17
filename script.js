@@ -2,22 +2,28 @@ $(document).ready(function (){
 
 	//Scroll the page to an related element by clicking on the menu_button
 
-	$("#about_button").click(function(){
-		$('html, body').animate({
-			scrollTop: $('#about_banner').offset().top - 40
-		}, 200);
+	$(".about_button").click(function(){
+		$("#about").toggle();
 	});
 
-	$("#organizers_button").click(function(){
-		$('html, body').animate({
-			scrollTop: $('#organizers_banner').offset().top - 40
-		}, 200);
+	$(".committees_button").click(function(){
+		$("#about").toggle();
 	});
 
-	$("#materials_button").click(function(){
-		$('html, body').animate({
-			scrollTop: $('#materials_banner').offset().top - 40
-		}, 200);
+	$(".creators_button").click(function(){
+		$("#about").toggle();
+	});
+
+	$(".materials_button").click(function(){
+		$("#about").toggle();
+	});
+
+	$(".history_button").click(function(){
+		$("#about").toggle();
+	});
+
+	$(".contact_button").click(function(){
+		$("#about").toggle();
 	});
 
 	//Translate the site
