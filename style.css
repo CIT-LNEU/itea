@@ -363,6 +363,7 @@ a:not(#lang_current, .menu_button, h4 a), p, li {
 
 a:not(#lang_current, .menu_button, h4 a), p {
 	margin-left: 26px;
+	text-align: justify;
 }
 
 #contact_banner p, #developer p {
@@ -384,6 +385,13 @@ a:not(#lang_current, .menu_button, h4 a), p {
 }
 
 @media screen and (max-width: 1084px) and (orientation: landscape){
+		#persons {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(320px, 100%));
+	}
+}
+
+@media screen and (orientation: portrait){
 		#persons {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(320px, 100%));
