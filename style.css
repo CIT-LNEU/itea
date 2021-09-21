@@ -393,7 +393,7 @@ a:not(#lang_current, #header a, h4 a, .person > p), p {
 }
 
 @media screen and (max-width: 1084px) and (orientation: landscape){
-	#persons {
+	#persons{
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(320px, 100%));
 	}
@@ -410,6 +410,23 @@ a:not(#lang_current, #header a, h4 a, .person > p), p {
 	}
 }
 
+#developer {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(450px, 50%));
+}
+
+@media screen and (max-width: 1084px) and (orientation: landscape) {
+	#developer {
+		grid-template-columns: repeat(auto-fill, minmax(600px, 100%));
+	}
+}
+
+@media screen and (orientation: portrait) {
+	#developer {
+		grid-template-columns: repeat(auto-fill, minmax(600px, 100%));
+	}
+}
+
 #contact a, #developer a {
 	line-height: 40px;
 	margin: 26px;
@@ -423,7 +440,7 @@ a:not(#lang_current, #header a, h4 a, .person > p), p {
 	transition: 0.3s;
 }
 
-#developer p:nth-of-type(1), #developer p:nth-of-type(2), #developer p:nth-of-type(3) {
+#developer p:first-of-type {
 	font-family: 'Montserrat Bold';
 }
 
