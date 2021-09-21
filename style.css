@@ -393,7 +393,7 @@ a:not(#lang_current, #header a, h4 a, .person > p), p {
 }
 
 @media screen and (max-width: 1084px) and (orientation: landscape){
-	#persons{
+	#persons {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(320px, 100%));
 	}
