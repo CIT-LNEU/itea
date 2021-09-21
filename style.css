@@ -88,7 +88,7 @@ div.page-container-inner {
   }
 
 /* Style the header*/
-.header {
+#header {
 	z-index: 99999;
 	position: fixed;
 	top: 0;
@@ -101,7 +101,7 @@ div.page-container-inner {
 }
 
 /* Style the header buttons */
-.header a {
+#header a:not(#lang_current) {
 	font-family: 'Montserrat Bold';
 	float: left;
 	text-align: center;
@@ -122,33 +122,35 @@ div.page-container-inner {
   user-select: none;
 }
 
-.header a:hover {
+#header a:not(#lang_current):hover {
 	background-color: #1C6728;
 	color: white;
 	transition: 0.3s;
 }
 
-#lang_current
-{
-	float: right;
+#header a:hover {
+	background-color: #1C6728;
+	color: white;
+	transition: 0.3s;
+}
 
-	/*Make switcher unselectable*/
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+#lang_current {
+	font-family: 'Montserrat Bold';
+	text-align: center;
+	padding: 12px;
+	float: right;
 	color: #1C6728;
 	text-decoration: none;
 	font-size: 18px;
 	line-height: 25px;
-	float: right;
-}
-
-#lang_current:hover {
-	color: white;
-	transition: 0.3s;
+	background-color: white;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 * {
@@ -162,7 +164,7 @@ div.page-container-inner {
 	text-align: right;
 }
 
-#title_banner {
+#title_section {
 	padding-left: 5%;
 	padding-right: 5%;
 	width: 100%;
@@ -278,7 +280,7 @@ div.page-container-inner {
 	grid-template-columns: repeat(auto-fill, minmax(470px, 50%));
 }
 
-.banner_title {
+.section_title {
 	font-family: 'Montserrat Bold';
 	margin-bottom: 24px;
 	font-size: 26px;
@@ -289,7 +291,7 @@ div.page-container-inner {
 }
 
 @media screen and (orientation: landscape) {
-	.banner_title {
+	.section_title {
 		background: -webkit-linear-gradient(left,
     #1C6728 40%,
     rgba(255,255,255,0.9) 100%
@@ -298,7 +300,7 @@ div.page-container-inner {
 }
 
 @media screen and (orientation: portrait) {
-	.banner_title {
+	.section_title {
 		background: -webkit-linear-gradient(left,
     	#1C6728 75%,
     	rgba(255,255,255,0.9) 135%
@@ -307,8 +309,8 @@ div.page-container-inner {
 	}
 }
 
-.banner {
-	margin-top: 3%;
+.section {
+	margin-top: 70px;
 	margin-bottom: 40px;
 }
 
@@ -350,7 +352,7 @@ li span {
 	color: #1C6728;
 }
 
-#banner a:not(h4 a) {
+#section a:not(h4 a) {
 	margin-top: 40px;
 	padding: 20px;
 	color: #1C6728;
@@ -363,17 +365,20 @@ iframe {
 	margin-top: 20px;
 }
 
-a:not(#lang_current, .header a, h4 a), p, li {
+a:not(#lang_current, #header a, h4 a), p, li {
 	font-size: 20px;
 	font-family: 'SourceSansPro Regular';
 }
 
-a:not(#lang_current, .header a, h4 a), p {
+a:not(#lang_current, #header a, h4 a), p {
 	margin-left: 26px;
-	text-align: justify;
 }
 
-#contact_banner p, #developer p {
+a:not(#lang_current, #header a, h4 a, .person > p), p {
+	text-align: left;
+}
+
+#contact p, #developer p {
 	margin-bottom: 4px;
 }
 
@@ -382,19 +387,19 @@ a:not(#lang_current, .header a, h4 a), p {
 	margin-bottom: 4px;
 }
 
-.person {
-	margin-bottom: 20px;
-}
-
 #persons {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(320px, 33%));
 }
 
 @media screen and (max-width: 1084px) and (orientation: landscape){
-		#persons {
+	#persons {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(320px, 100%));
+	}
+
+	.person {
+		margin-bottom: 14px;
 	}
 }
 
@@ -405,14 +410,14 @@ a:not(#lang_current, .header a, h4 a), p {
 	}
 }
 
-#contact_banner a, #developer a {
+#contact a, #developer a {
 	line-height: 40px;
 	margin: 26px;
 	text-decoration: none;
 	color: #1C6728;
 }
 
-#contact_banner a:hover, #developer a:hover {
+#contact a:hover, #developer a:hover {
 	background-color: #1C6728;
 	color: white;
 	transition: 0.3s;

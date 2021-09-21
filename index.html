@@ -14,25 +14,25 @@
 
 <body>
 
-	<div class="header">
+	<div id="header">
 
-		<a class="about_button" lang="en">About</a>
-		<a class="about_button" lang="ua">Про конференцію</a>
+		<a class="about_button" lang="en" onclick="goto(this)" hash="#about">About</a>
+		<a class="about_button" lang="ua" onclick="goto(this)" hash="#about">Про конференцію</a>
 
-		<a class="committees_button" lang="en">Organizing Committees</a>
-		<a class="committees_button" lang="ua">Організаційні комітети</a>
+		<a class="committees_button" lang="en" onclick="goto(this)" hash="#committees">Organizing Committees</a>
+		<a class="committees_button" lang="ua" onclick="goto(this)" hash="#committees">Організаційні комітети</a>
 
-		<a class="creators_button" lang="en">For Creators</a>
-		<a class="creators_button" lang="ua">Для авторів</a>
+		<a class="creators_button" lang="en" onclick="goto(this)" hash="#creators">For Creators</a>
+		<a class="creators_button" lang="ua" onclick="goto(this)" hash="#creators">Для авторів</a>
 
-		<a class="materials_button" lang="en">Materials</a>
-		<a class="materials_button" lang="ua">Матеріали</a>
+		<a class="materials_button" lang="en" onclick="goto(this)" hash="#materials">Materials</a>
+		<a class="materials_button" lang="ua" onclick="goto(this)" hash="#materials">Матеріали</a>
 
-		<a class="history_button" lang="en">History</a>
-		<a class="history_button" lang="ua">Історія</a>
+		<a class="history_button" lang="en" onclick="goto(this)" hash="#history">History</a>
+		<a class="history_button" lang="ua" onclick="goto(this)" hash="#history">Історія</a>
 
-		<a class="contact_button" lang="en">Contact</a>
-		<a class="contact_button" lang="ua">Контакти</a>
+		<a class="contact_button" lang="en" onclick="goto(this)" hash="#contact">Contact</a>
+		<a class="contact_button" lang="ua" onclick="goto(this)" hash="#contact">Контакти</a>
 
 		<a id="lang_current">EN</a>
 	</div>
@@ -41,7 +41,7 @@
 		<div class="page-container-inner">
 
 			<div id="about">
-				<div id="title_banner">
+				<div id="title_section">
 					<div id="title">
 						<img id="logo" src="images/Logo2.png"></img>
 						<h1 class="name" lang="en">Information technologies in energy and agro-industrial complex</h1>
@@ -49,9 +49,9 @@
 					</div>
 				</div>
 
-				<div class="banner" id="about_banner">
-					<h2 class="banner_title" lang="en">About the Conference</h2>
-					<h2 class="banner_title" lang="ua">Про конференцію</h2>
+				<div class="section" id="about_section">
+					<h2 class="section_title" lang="en">About the Conference</h2>
+					<h2 class="section_title" lang="ua">Про конференцію</h2>
 
 					<p lang="en" class="info">The Conference dedicated to the 20th anniversary of Department of Power Engineering. The purpose of the conference is to discuss trends in the development and application of modern information technologies in energy and agriculture, exchange of experience in implementing innovative information technologies that increase the efficiency of resource and energy consumption, use of renewable energy sources, project management, environmental, economic and energy assessment of technologies and technics, design of computer, energy and technical systems in certain industries.</p>
 					<p lang="ua" class="info">Метою конференції є обговорення тенденцій розроблення та прикладного використання сучасних інформаційних технологій у енергетиці та АПК, обмін досвідом щодо впровадження інноваційних інформаційних технологій, які забезпечують підвищення ефективності заходів ресурсо- та енергозбереження, використання відновлюваних джерел енергії, управління проектами, еколого-економічної й енергетичної оцінки технологій та техніки, проектування комп’ютерних, енергетичних і технічних систем у окремих галузях.</p>
@@ -75,9 +75,7 @@
 						<li>Проектний менеджмент.</li>
 						<li>Інформаційні технології економіко-екологічної оцінки проектів і систем в енергетиці та АПК.</li>
 					</ol>
-				</div>
 
-				<div class="banner" id="organizers_banner">
 					<h2 lang="en" class="subtitle" id="organizers_title"><span>Organizers of the Conference</span></h2>
 					<h2 lang="ua" class="subtitle" id="organizers_title"><span>Організатори конференції</span></h2>
 					<div lang="en" id="organizers">
@@ -149,59 +147,56 @@
 						<container class="organizer">
 							<img src="images/AJP.png">
 							<div>
-								<h4><a href="https://ajp.edu.pl/">Академії ім. Якуба з Парадижу</a></h4>
+								<h4><a href="https://ajp.edu.pl/">Академія ім. Якуба з Парадижу</a></h4>
 							</div>
 						</container>
 					</div>
-				</div>
 
-				<h2 lang="en" class="subtitle" id="partners_title"><span>Partners</span></h2>
-				<h2 lang="ua" class="subtitle" id="partners_title"><span>Партнери</span></h2>
+					<h2 lang="en" class="subtitle" id="partners_title"><span>Partners</span></h2>
+					<h2 lang="ua" class="subtitle" id="partners_title"><span>Партнери</span></h2>
 
-				<p lang="en" class="wip">Work in progress</p>
-				<p lang="ua" class="wip">У процесі розробки</p>
+					<p lang="en" class="wip">Work in progress</p>
+					<p lang="ua" class="wip">У процесі розробки</p>
 
-				<!-- <div lang="en" id="partners">
-					<container class="partner">
-						<img src="images/">
-						<div>
-							<h4><a href="">Name</a></h4>
-						</div>
-					</container>
+					<!-- <div lang="en" id="partners">
+						<container class="partner">
+							<img src="images/">
+							<div>
+								<h4><a href="">Name</a></h4>
+							</div>
+						</container>
 
-					<container class="partner">
-						<img src="images/">
-						<div>
-							<h4><a href="">Name</a></h4>
-						</div>
-					</container>
+						<container class="partner">
+							<img src="images/">
+							<div>
+								<h4><a href="">Name</a></h4>
+							</div>
+						</container>
 
-					<container class="partner">
-						<img src="images/">
-						<div>
-							<h4><a href="">Name</a></h4>
-						</div>
-					</container>
+						<container class="partner">
+							<img src="images/">
+							<div>
+								<h4><a href="">Name</a></h4>
+							</div>
+						</container>
 
-					<container class="partner">
-						<img src="images/">
-						<div>
-							<h4><a href="">Name</a></h4>
-						</div>
-					</container>
+						<container class="partner">
+							<img src="images/">
+							<div>
+								<h4><a href="">Name</a></h4>
+							</div>
+						</container>
 
-					<container class="partner">
-						<img src="images/">
-						<div>
-							<h4><a href="">Name</a></h4>
-						</div>
-					</container>
-				</div> -->
-				
-				
-				<div class="banner" id="location_banner">
-					<h2 class="banner_title" lang="en">Location of the Conference</h2>
-					<h2 class="banner_title" lang="ua">Місце проведення конференції</h2>
+						<container class="partner">
+							<img src="images/">
+							<div>
+								<h4><a href="">Name</a></h4>
+							</div>
+						</container>
+					</div> -->
+					
+					<h2 class="section_title" lang="en">Location of the Conference</h2>
+					<h2 class="section_title" lang="ua">Місце проведення конференції</h2>
 
 					<p lang="en">The plenary session of the conference will take place in the building of the Faculty of Mechanics and Energy. Section meetings of the conference will be held in the Laboratory of Renewable Energy and Energy Saving of the Department of Power Engineering.</p>
 					<p lang="ua">Пленарне засідання конференції (урочиста академія) відбудеться у корпусі факультету механіки та енергетики. Секційні засідання конференції відбудуться в лабораторії відновлюваної енергетики та енергозбереження кафедри енергетики.</p>
@@ -254,21 +249,40 @@
 				</div>
 			</div>
 
-			<div id="committees">
-				<h2 class="banner_title" lang="en">Organizing Committees</h2>
-				<h2 class="banner_title" lang="ua">Організаційні комітети</h2>
+			<div class="section" id="committees">
+				<h2 class="section_title" lang="en">Organizing Committees</h2>
+				<h2 class="section_title" lang="ua">Організаційні комітети</h2>
 
 				<p lang="en" class="wip">Work in progress</p>
 				<p lang="ua" class="wip">У процесі розробки</p>
 			</div>
 			
-			<div lang="en" class="banner" id="invitation_banner">
-				<h2 lang="en" class="banner_title">Invitation</h2>
-				<a lang="en" id="invitation_button" onclick="window.open('resources/ITEA2021 Invitation.doc')">Download Invitation Letter</a>
+			<div class="section" id="creators">
+				<h2 lang="en" class="section_title">For creators</h2>
+				<h2 lang="ua" class="section_title">Для авторів</h2>
+
+				<p lang="en" class="wip">Work in progress</p>
+				<p lang="ua" class="wip">У процесі розробки</p>
 			</div>
 
-			<div class="banner" id="registration_banner">
-				<h2 class="banner_title" lang="ua">Реєстрація учасників</h2>
+			<div class="section" id="materials">
+				<h2 lang="en" class="section_title">Conference materials</h2>
+				<h2 lang="ua" class="section_title">Матеріали конференції</h2>
+
+				<p lang="en" class="wip">Work in progress</p>
+				<p lang="ua" class="wip">У процесі розробки</p>
+			</div>
+
+			<div class="section" id="history">
+				<h2 lang="en" class="section_title">History of the Conference</h2>
+				<h2 lang="ua" class="section_title">Історія конференції</h2>
+
+				<p lang="en" class="wip">Work in progress</p>
+				<p lang="ua" class="wip">У процесі розробки</p>
+			</div>
+
+			<!-- <div class="section" id="registration_section">
+				<h2 class="section_title" lang="ua">Реєстрація учасників</h2>
 				<ul>
 					<li lang="ua">До 5 жовтня 2021 <span>–</span> реєстрація та подання тез доповідей.</li>
 					<li lang="ua">До 8 жовтня 2021 <span>–</span> рекомендація до подання розширених статей.</li>
@@ -277,7 +291,7 @@
 					<li lang="ua">До 5 листопада 2021 – подання завершених статей.</li>
 				</ul>
 
-				<h2 class="banner_title" lang="en">Registration of participants</h2>
+				<h2 class="section_title" lang="en">Registration of participants</h2>
 				<ul>
 					<li lang="en">October 5 2021 <span>–</span> registration and abstract submission deadline.</li>
 					<li lang="en">October 8 2021 <span>–</span> recommendation for manuscript submission.</li>
@@ -285,87 +299,90 @@
 					<li lang="en">October 29 2021 <span>–</span> manuscript review  deadline.</li>
 					<li lang="en">November 5 2021 <span>–</span> camera ready manuscript submission deadline.</li>
 				</ul>
-			</div>
+			</div> -->
 
-			<div class="banner" lang="en" id="contact_banner">
-				<h2 class="banner_title">Contact</h2>s
-				<p>Faculty of Mechanics, Power engineering and Information Technologies</p>
-				<p>Lviv National Agrarian University</p>
-				<p>1 V. Velykoho Str., Lviv-Dubliany, 80381</p>
+			<div class="section" id="contact">
+				<div lang="en">
+					<h2 class="section_title">Contact</h2>
+					<p>Faculty of Mechanics, Power engineering and Information Technologies</p>
+					<p>Lviv National Agrarian University</p>
+					<p>1 V. Velykoho Str., Lviv-Dubliany, 80381</p>
 
-				<a href="mailto:itea@lnau.edu.ua">itea@lnau.edu.ua</a>
+					<a href="mailto:itea@lnau.edu.ua">itea@lnau.edu.ua</a>
 
-				<h2 class="subtitle" id="contact_persons_title"><span>Contact Persons</span></h2>
-				<div id="persons">
-					<div class="person">
-						<p>Associate Professor Serhiy Syrotyuk</p>
-						<p>+38 (032) 224-29-58,</p>
-						<p>+38 (067) 939-62-46</p>
+					<h2 class="subtitle"><span>Contact Persons</span></h2>
+					<div id="persons">
+						<div class="person">
+							<p>Associate Professor Serhiy Syrotyuk</p>
+							<p>+38 (032) 224-29-58,</p>
+							<p>+38 (067) 939-62-46</p>
+						</div>
+
+						<div class="person">
+							<p>Associate Professor Vadym Ptashnyk</p>
+							<p>+38 (063) 040-10-40</p>
+						</div>
+
+						<div class="person">
+							<p>Associate Professor Roman Kryhul</p>
+							<p>+38 (032) 224-29-58,</p>
+							<p>+38 (067) 759-80-15</p>
+						</div>
 					</div>
 
-					<div class="person">
-						<p>Associate Professor Vadym Ptashnyk</p>
-						<p>+38 (063) 040-10-40</p>
-					</div>
+					<h2 class="subtitle"><span>Website Developer</span></h2>
 
-					<div class="person">
-						<p>Associate Professor Roman Kryhul </p>
-						<p>+38 (032) 224-29-58,</p>
-						<p>+38 (067) 759-80-15</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="banner" lang="ua" id="contact_banner">
-				<h2 class="banner_title">Контакти</h2>
-				<p>Факультет механіки, енергетики та інформаційних технологій</p>
-				<p>Львівський національний аграрний університет</p>
-				<p>80381, Львів-Дубляни, вул. В. Великого, 1</p>
-
-				<a href="mailto:itea@lnau.edu.ua">itea@lnau.edu.ua</a>
-
-				<h2 class="subtitle" id="contact_persons_title"><span>Контактні особи</span></h2>
-				<div id="persons">
-					<div class="person">
-						<p>к.т.н., доцент Сиротюк С.В.</p>
-						<p>+38 (032) 224-29-58,</p>
-						<p>+38 (067) 939-62-46</p>
-					</div>
-
-					<div class="person">
-						<p>к.т.н., доцент Пташник В.В.</p>
-						<p>+38 (063) 040-10-40</p>
-					</div>
-
-					<div class="person">
-						<p>к.т.н., доцент Кригуль Р.Є.</p>
-						<p>+38 (032) 224-29-58,</p>
-						<p>+38 (067) 759-80-15</p>
+					<div id="developer">
+						<p>A student of department of Informational technologies</p>
+						<p>Employee of department of CIT</p>
+						<p>Nekyha Maksym Ihorovych</p>
+						<p>Department of computer-informational technologies</p>
+						<p>Lviv National Agrarian University</p>
+						<p>1 V. Velykoho Str., Lviv-Dubliany, 80381</p>
+						<a href="mailto:nekigami@lnau.edu.ua">nekigami@lnau.edu.ua</a>
 					</div>
 				</div>
-			</div>
+				
+				<div lang="ua">
+					<h2 class="section_title">Контакти</h2>
+					<p>Факультет механіки, енергетики та інформаційних технологій</p>
+					<p>Львівський національний аграрний університет</p>
+					<p>80381, Львів-Дубляни, вул. В. Великого, 1</p>
 
-			<h2 lang="en" class="subtitle" style="margin-top: -20px;"><span>Website Developer</span></h2>
-			<h2 lang="ua" class="subtitle" style="margin-top: -20px;"><span>Розробник веб-сайту</span></h2>
+					<a href="mailto:itea@lnau.edu.ua">itea@lnau.edu.ua</a>
 
-			<div lang="en" id="developer">
-				<p>Nekyha Maksym Ihorovych</p>
-				<p>A student of department of Informational technologies</p>
-				<p>Employee of department of CIT</p>
-				<p>Department of computer-informational technologies</p>
-				<p>Lviv National Agrarian University</p>
-				<p>1 V. Velykoho Str., Lviv-Dubliany, 80381</p>
-				<a href="mailto:nekigami@lnau.edu.ua">nekigami@lnau.edu.ua</a>
-			</div>
+					<h2 class="subtitle"><span>Контактні особи</span></h2>
+					<div id="persons">
+						<div class="person">
+							<p>к.т.н., доцент Сиротюк С.В.</p>
+							<p>+38 (032) 224-29-58,</p>
+							<p>+38 (067) 939-62-46</p>
+						</div>
 
-			<div lang="ua" id="developer">
-				<p>Некига Максим Ігорович</p>
-				<p>Студент кафедри інформаційних технологій</p>
-				<p>Працівник відділу КІТ</p>
-				<p>Відділ комп'ютерно-інформаційних технологій</p>
-				<p>Львівський національний аграрний університет</p>
-				<p>80381, Львів-Дубляни, вул. В. Великого, 1</p>
-				<a href="mailto:nekigami@lnau.edu.ua">nekigami@lnau.edu.ua</a>
+						<div class="person">
+							<p>к.т.н., доцент Пташник В.В.</p>
+							<p>+38 (063) 040-10-40</p>
+						</div>
+
+						<div class="person">
+							<p>к.т.н., доцент Кригуль Р.Є.</p>
+							<p>+38 (032) 224-29-58,</p>
+							<p>+38 (067) 759-80-15</p>
+						</div>
+					</div>
+
+					<h2 class="subtitle"><span>Розробник веб-сайту</span></h2>
+
+					<div id="developer">
+						<p>Некига Максим Ігорович</p>
+						<p>Студент кафедри інформаційних технологій</p>
+						<p>Працівник відділу КІТ</p>
+						<p>Відділ комп'ютерно-інформаційних технологій</p>
+						<p>Львівський національний аграрний університет</p>
+						<p>80381, Львів-Дубляни, вул. В. Великого, 1</p>
+						<a href="mailto:nekigami@lnau.edu.ua">nekigami@lnau.edu.ua</a>
+					</div>
+				</div>
 			</div>
 		</div>
     </div>

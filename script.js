@@ -1,30 +1,31 @@
-$(document).ready(function (){
+var sections = ["#about", "#committees", "#creators", "#materials", "#history", "#contact"];
+var current_section = window.location.hash;
 
-	//Scroll the page to an related element by clicking on the menu_button
+function goto(sender) {
+	var next_section = sender.getAttribute("hash");
+	if (window.location.hash != next_section) {
+		window.location.hash = next_section;
+		change_section(next_section);
+	}
+}
 
-	$(".about_button").click(function(){
-		$("#about").toggle();
-	});
+function change_section(section) {
+	for (var i = 0; i < sections.length; i++) {
+		if (sections[i] != section) {
+			
+			$(sections[i]).hide();
+		}
+		else {
+			$(sections[i]).show();
+		}
+	}
+	$(window).scrollTop(0);
+	console.log("Switched section to", section);
+}
 
-	$(".committees_button").click(function(){
-		$("#about").toggle();
-	});
+$(document).ready(function () {
 
-	$(".creators_button").click(function(){
-		$("#about").toggle();
-	});
-
-	$(".materials_button").click(function(){
-		$("#about").toggle();
-	});
-
-	$(".history_button").click(function(){
-		$("#about").toggle();
-	});
-
-	$(".contact_button").click(function(){
-		$("#about").toggle();
-	});
+	change_section(window.location.hash);
 
 	//Translate the site
 
