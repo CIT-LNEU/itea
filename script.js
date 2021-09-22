@@ -25,8 +25,13 @@ function change_section(section) {
 
 $(document).ready(function () {
 
-	change_section(window.location.hash);
-
+  if (window.location.hash === '') {
+    change_section("#about");
+  }
+	else {
+	  change_section(window.location.hash);
+	}
+	
 	//Translate the site
 
 	if (/^uk\b/.test(navigator.language) || /^ru\b/.test(navigator.language))
