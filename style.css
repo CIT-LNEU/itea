@@ -157,14 +157,23 @@ div.page-container-inner {
 	box-sizing: border-box;
 }
 
-.name {
+#title h1 {
 	font-family: 'Montserrat Semibold';
-	font-size: 2.4em;
-	font-weight: 300;
+	font-size: 38px;
 	text-align: right;
+	color: #1C6728;
+}
+
+#title h1:last-of-type, #title h1:nth-of-type(3) {
+	font-family: 'Montserrat Bold';
+	font-size: 38px;
+	text-align: center;
+	margin-top: 32px;
+	margin-left: 16px;
 }
 
 #title_section {
+	position: relative;
 	padding-left: 5%;
 	padding-right: 5%;
 	width: 100%;
@@ -178,15 +187,17 @@ div.page-container-inner {
 }
 
 #title {
-
 	width: 50%;
-	height: 250px;
 	position: absolute;
-	top: 200px;
+	top: 150px;
 	float: right;
 	right: 13%;
 	padding: 2%;
 	background-color: rgba(255, 255, 255, 0.85);
+}
+
+#logo {
+	max-width: 195px;
 }
 
 #title img {
@@ -210,19 +221,6 @@ div.page-container-inner {
   padding-right: 30px;
   padding-top: 0.4%;
   padding-bottom: 0.4%;
-}
-
-#logo {
-	max-width: 195px;
-}
-
-.name, .date {
-	color: #1C6728;
-}
-
-.info {
-	margin-top: 2%;
-	margin-bottom: 2%;
 }
 
 .organizer img, .partner img {
