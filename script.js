@@ -4,19 +4,24 @@ var current_section = window.location.hash;
 function goto(sender) {
 	var next_section = sender.getAttribute("hash");
 	if (window.location.hash != next_section) {
-		window.location.hash = next_section;
-		change_section(next_section);
+		change_section(next_section, true);
 	}
 }
 
-function change_section(section) {
+function change_section(section, animate) {
+	window.location.hash = section;
 	for (var i = 0; i < sections.length; i++) {
 		if (sections[i] != section) {
-			
 			$(sections[i]).hide();
 		}
 		else {
+			var appear = document.getElementById(sections[i].replace('#', ''));
+			appear.style.opacity = '0';
 			$(sections[i]).show();
+			if (animate) {
+				appear.style.transition = '1s';
+			}
+			appear.style.opacity = '1';
 		}
 	}
 	$(window).scrollTop(0);
@@ -25,13 +30,13 @@ function change_section(section) {
 
 $(document).ready(function () {
 
-  if (window.location.hash === '') {
-    change_section("#about");
-  }
+	if (window.location.hash === '') {
+		change_section("#about", false);
+	}
 	else {
 	  change_section(window.location.hash);
 	}
-	
+
 	//Translate the site
 
 	if (/^uk\b/.test(navigator.language) || /^ru\b/.test(navigator.language))
