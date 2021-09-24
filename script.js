@@ -14,14 +14,18 @@ function change_section(section, animate) {
 		if (sections[i] != section) {
 			$(sections[i]).hide();
 		}
-		else {
+		else if (animate) {
 			var appear = document.getElementById(sections[i].replace('#', ''));
 			appear.style.opacity = '0';
+			appear.style.marginLeft = '100px';
 			$(sections[i]).show();
-			if (animate) {
-				appear.style.transition = '1s';
-			}
+			appear.style.transition = '1s';
+			appear.style.marginLeft = '0';
 			appear.style.opacity = '1';
+			appear.style.position = 'static';
+		}
+		else {
+			$(sections[i]).show();
 		}
 	}
 	$(window).scrollTop(0);
