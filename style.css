@@ -374,7 +374,7 @@ a:not(#lang_current, #header a, h4 a), p {
 }
 
 a:not(#lang_current, #header a, h4 a, .person > p), p {
-	text-align: left;
+	text-align: justify;
 }
 
 #contact p, #developer p {
