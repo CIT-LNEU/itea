@@ -17,7 +17,7 @@ function change_section(section, animate) {
 		else if (animate) {
 			var appear = document.getElementById(sections[i].replace('#', ''));
 			appear.style.opacity = '0';
-			appear.style.left = '100px';
+			appear.style.left = '50px';
 			$(sections[i]).show();
 			appear.style.transition = '1s';
 			appear.style.position = 'relative';
@@ -32,6 +32,7 @@ function change_section(section, animate) {
 	$(window).scrollTop(0);
 }
 
+// reset transition time after changing section or language
 function changeTransition(sender) {
 	sender.style.transition = "0.3s";
 }

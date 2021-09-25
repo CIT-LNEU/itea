@@ -364,16 +364,16 @@ iframe {
 	margin-top: 20px;
 }
 
-a:not(#lang_current, #header a, h4 a), p, li {
+a:not(#lang_current, #header a, h4 a, .button), p, li {
 	font-size: 20px;
 	font-family: 'SourceSansPro Regular';
 }
 
-a:not(#lang_current, #header a, h4 a), p {
+a:not(#lang_current, #header a, h4 a, #creators a, .button), p {
 	margin-left: 26px;
 }
 
-a:not(#lang_current, #header a, h4 a, .person > p), p {
+a:not(#lang_current, #header a, h4 a, .person > p, .button), p:not(#persons p), li {
 	text-align: justify;
 }
 
@@ -448,3 +448,25 @@ a:not(#lang_current, #header a, h4 a, .person > p), p {
 	margin: 26px;
 }
 
+#creators div {
+	width: 100%;
+}
+
+.button {
+	display: table;
+	padding: 14px;
+	color: #1C6728;
+	background-color: white;
+	border: 2px #1C6728 solid;
+	text-decoration: none;
+	text-align: center;
+	font-family: 'Montserrat Bold';
+	font-size: 18px;
+	margin: 0 auto;
+}
+
+.button:hover {
+	transition: 0.3s;
+	color: white;
+	background-color: #1C6728;
+}
