@@ -17,22 +17,30 @@ function change_section(section, animate) {
 		else if (animate) {
 			var appear = document.getElementById(sections[i].replace('#', ''));
 			appear.style.opacity = '0';
-			appear.style.marginLeft = '100px';
+			appear.style.left = '100px';
 			$(sections[i]).show();
 			appear.style.transition = '1s';
-			appear.style.marginLeft = '0';
+			appear.style.position = 'relative';
+			appear.style.left = '0';
 			appear.style.opacity = '1';
-			appear.style.position = 'static';
+			
 		}
 		else {
 			$(sections[i]).show();
 		}
 	}
 	$(window).scrollTop(0);
-	console.log("Switched section to", section);
 }
 
-$(document).ready(function () {
+function changeTransition(sender) {
+	sender.style.transition = "0.3s";
+}
+
+$(document).ready(function() {
+
+	lang_list = [];
+	lang_list[0] = document.querySelectorAll('[lang=en]');
+	lang_list[1] = document.querySelectorAll('[lang=ua]');
 
 	if (window.location.hash === '') {
 		change_section("#about", false);
@@ -57,15 +65,40 @@ $(document).ready(function () {
 	}
 	
 	$('#lang_current').click(function() {
-		$('[lang="ua"]').toggle();
-		$('[lang="en"]').toggle();
+
 		if (sw === false) {
 			sw = true;
 			document.getElementById("lang_current").textContent = "EN";
+
+			for (var i = 0; i < lang_list[1].length; i++) {
+				$(lang_list[1][i]).hide();
+			}
+			for (var i = 0; i < lang_list[0].length; i++) {
+				lang_list[0][i].style.opacity = '0';
+				lang_list[0][i].style.left = '50px';
+				$(lang_list[0][i]).show();
+				lang_list[0][i].style.transition = '1s';
+				lang_list[0][i].style.position = 'relative';
+				lang_list[0][i].style.left = '0';
+				lang_list[0][i].style.opacity = '1';
+			}
 		}
 		else {
 			sw = false;
 			document.getElementById("lang_current").textContent = "UA";
+
+			for (var i = 0; i < lang_list[0].length; i++) {
+				$(lang_list[0][i]).hide();
+			}
+			for (var i = 0; i < lang_list[1].length; i++) {
+				lang_list[1][i].style.opacity = '0';
+				lang_list[1][i].style.left = '50px';
+				$(lang_list[1][i]).show();
+				lang_list[1][i].style.transition = '1s';
+				lang_list[1][i].style.position = 'relative';
+				lang_list[1][i].style.left = '0';
+				lang_list[1][i].style.opacity = '1';
+			}
 		}
 	});
 });

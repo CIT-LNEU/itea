@@ -322,6 +322,7 @@ li {
 ol, ul {
   list-style: none;
   counter-reset: counter;
+  margin-top: 14px;
 }
 
 ol li {
