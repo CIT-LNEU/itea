@@ -55,7 +55,7 @@ $(document).ready(function() {
 	if (/^uk\b/.test(navigator.language) || /^ru\b/.test(navigator.language))
 	{
 		$('[lang="en"]').hide();
-		document.getElementById("lang_current").textContent = "UA";
+		document.getElementById("lang_current").textContent = "UK";
 		var sw = false;
 	}
 	else
@@ -86,7 +86,7 @@ $(document).ready(function() {
 		}
 		else {
 			sw = false;
-			document.getElementById("lang_current").textContent = "UA";
+			document.getElementById("lang_current").textContent = "UK";
 
 			for (var i = 0; i < lang_list[0].length; i++) {
 				$(lang_list[0][i]).hide();
