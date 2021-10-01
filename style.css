@@ -74,61 +74,69 @@ body {
 	font-weight: 600;
 }
 
-div.page-container {
-  max-width: 90%;
-  margin: 0 auto;
-  padding: 0;
-  }
-
-div.page-container-inner {
-
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 0;
-  }
-
-/* Style the header*/
 #header {
-	z-index: 99999;
+	border-bottom: 2px solid #1C6728;
 	position: fixed;
-	top: 0;
+	z-index: 10;
 	width: 100%;
-	padding-left: 5%;
-	padding-right: 5%;
-	border-bottom: 3px solid #1C6728;
-	overflow: hidden;
+	top: 0;
 	background-color: white;
 }
 
+#header-outer {
+	max-width: 90%;
+  margin: 0 auto;
+  padding: 0;
+	max-width: 90%;
+	overflow: hidden;
+}
+
+#page-container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#page-container-inner, #header-inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Style the header*/
+#header-inner {
+	background-color: white;
+}
+
+#current_navbar_selection {
+	background-color: #1C6728;
+	transition: 1s;
+}
+
 /* Style the header buttons */
-#header a:not(#lang_current) {
+#header-outer li:not(#lang_current) {
 	font-family: 'Montserrat Bold';
 	float: left;
 	text-align: center;
-	padding: 12px;
+	padding: 12px 20px;
 	text-decoration: none;
 	font-size: 18px;
 	line-height: 25px;
-	background-color: white;
 	color: #1C6728;
-	padding-right: 20px;
-	padding-left: 20px;
+	background-color: transparent;
 	cursor: pointer;
 	-webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
 }
 
-#header a:not(#lang_current):hover {
-	background-color: #1C6728;
-	color: white;
-	transition: 0.3s;
+#header-outer li:not(#lang_current):after {
+	mix-blend-mode: exclusion;
 }
 
-#header a:hover {
+#header-outer li:hover {
 	background-color: #1C6728;
 	color: white;
 	transition: 0.3s;
@@ -312,14 +320,14 @@ div.page-container-inner {
 	margin-bottom: 40px;
 }
 
-li {
+li:not(#header-outer li) {
 	padding-left: 26px;
   margin-left: 0px;
   margin-bottom: 4px;
   padding-left: 0;
 }
 
-ol, ul {
+ol, ul:not(#header-inner) {
   list-style: none;
   counter-reset: counter;
   margin-top: 14px;
@@ -343,7 +351,7 @@ ol li::before {
 	margin-right: 4px;
 }
 
-ul li {
+ul li:not(#header-inner li) {
 	margin-left: 26px;
 }
 
@@ -364,16 +372,16 @@ iframe {
 	margin-top: 20px;
 }
 
-a:not(#lang_current, #header a, h4 a, .button), p, li {
+a:not(#lang_current, #header-outer a, h4 a, .button), p, li {
 	font-size: 20px;
 	font-family: 'SourceSansPro Regular';
 }
 
-a:not(#lang_current, #header a, h4 a, #creators a, .button), p {
+a:not(#lang_current, #header-outer a, h4 a, #creators a, .button), p {
 	margin-left: 26px;
 }
 
-a:not(#lang_current, #header a, h4 a, .person > p, .button), p:not(#persons p), li {
+a:not(#lang_current, #header-outer a, h4 a, .person > p, .button), p:not(#persons p), li {
 	text-align: justify;
 }
 
