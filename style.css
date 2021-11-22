@@ -154,11 +154,11 @@ body {
 	background-color: white;
 	cursor: pointer;
 	-webkit-touch-callout: none;
-  	-webkit-user-select: none;
-  	-khtml-user-select: none;
-  	-moz-user-select: none;
-  	-ms-user-select: none;
-  	user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 * {
@@ -240,7 +240,7 @@ body {
 	position: absolute;
 	top: 50%;
 	-ms-transform: translateY(-50%);
-  	transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .organizer h4, .partner h4 {
@@ -263,7 +263,7 @@ body {
 	position: absolute;
 	top: 50%;
 	-ms-transform: translateY(-50%);
-  	transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .organizer a, .partner a {
@@ -377,7 +377,7 @@ a:not(#lang_current, #header-outer a, h4 a, .button), p, li {
 	font-family: 'SourceSansPro Regular';
 }
 
-a:not(#lang_current, #header-outer a, h4 a, #creators a, .button, .prev, .next), p {
+a:not(#lang_current, #header-outer a, h4 a, #creators a, .button), p {
 	margin-left: 26px;
 }
 
@@ -460,8 +460,8 @@ a:not(#lang_current, #header-outer a, h4 a, .person > p, .button), p:not(#person
 	width: 100%;
 }
 
-.button {
-	display: table;
+.button:not(#button-row > button) {
+	display: table;;
 	padding: 14px;
 	color: #1C6728;
 	background-color: white;
@@ -473,86 +473,26 @@ a:not(#lang_current, #header-outer a, h4 a, .person > p, .button), p:not(#person
 	margin: 0 auto;
 }
 
-.button:hover {
+.button:not(#button-row > button):hover {
 	transition: 0.3s;
 	color: white;
 	background-color: #1C6728;
 }
 
-#slide img {
-	height: 500px;
-}
-
-.mySlides {
-	display: none;
-	text-align: center;
-}
-
-.slideshow-container {
-	width: 100%;
+#button-row > button {
+	display: table;
+	height: 132px;
+	background-color: none;
 	position: relative;
-}
-/* Next & previous buttons */
-.prev, .next {
-	cursor: pointer;
-	position: absolute;
-	top: 50%;
-	width: auto;
-	padding: 30px;
-	margin-top: -22px;
-	margin-left: 10%;
-	margin-right: 10%;
-	color: white;
-	font-weight: bold;
-	font-size: 30px !important;
-	transition: 0.6s ease;
-	border-radius: 3px;
-	background-color: rgba(1, 1, 1, 0.4);
-	-webkit-touch-callout: none;
-  	-webkit-user-select: none;
-  	-khtml-user-select: none;
-  	-moz-user-select: none;
-  	-ms-user-select: none;
-  	user-select: none;
-}
-/* Position the "next button" to the right */
-.next {
-	right: 0;
-	border-radius: 3px;
-}
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-	background-color: rgba(1, 1, 1, 0.1);
-	color: #1C6728;
+	vertical-align: middle;
 }
 
-/* The dots/bullets/indicators */
-.dot {
-	cursor: pointer;
-	height: 13px;
-	width: 13px;
-	margin: 0 2px;
-	background-color: #bbb;
-	border-radius: 50%;
-	display: inline-block;
-	transition: background-color 0.6s ease;
-}
-.active, .dot:hover {
-	background-color: #1C6728;
-}
-/* Fading animation */
-.fade {
-	-webkit-animation-name: fade;
-	-webkit-animation-duration: 2s;
-	animation-name: fade;
-	animation-duration: 2s;
-}
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+#button-row {
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-top: 2%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 50%);
+	max-width: 60%;
+	margin: auto;
 }
