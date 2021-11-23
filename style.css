@@ -68,6 +68,13 @@ table {
 	font-style: bold;
 }
 
+@font-face {
+	font-family: 'SourceSansPro Bold';
+	src: url('fonts/SourceSansPro-Bold.ttf');
+	font-weight: normal;
+	font-style: bold;
+}
+
 body {
 	position: relative;
 	background-color: white;
@@ -108,11 +115,6 @@ body {
 	background-color: white;
 }
 
-#current_navbar_selection {
-	background-color: #1C6728;
-	transition: 1s;
-}
-
 /* Style the header buttons */
 #header-outer li:not(#lang_current) {
 	font-family: 'Montserrat Bold';
@@ -130,10 +132,6 @@ body {
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-}
-
-#header-outer li:not(#lang_current):after {
-	mix-blend-mode: exclusion;
 }
 
 #header-outer li:hover {
@@ -327,7 +325,7 @@ li:not(#header-outer li) {
   padding-left: 0;
 }
 
-ol, ul:not(#header-inner) {
+ol:not(#requirements-list-inner), ul:not(#header-inner) {
   list-style: none;
   counter-reset: counter;
   margin-top: 14px;
@@ -495,4 +493,33 @@ a:not(#lang_current, #header-outer a, h4 a, .person > p, .button), p:not(#person
 	grid-template-columns: repeat(auto-fill, 50%);
 	max-width: 60%;
 	margin: auto;
+}
+
+.text-link {
+	color: #1C6728;
+	text-decoration: none;
+}
+
+.text-link:hover {
+	background-color: #1C6728;
+	color: white;
+	transition: 0.3s;
+}
+
+#requirements-list-inner {
+	counter-reset: item;
+}
+
+#requirements-list-inner li:before { 
+  content: "4." counter(item) "."; 
+  counter-increment: item;
+  margin-left: 26px;
+}
+
+#requirements-list-inner li:first-of-type {
+	margin-top: 6px;
+}
+
+b {
+	font-family: 'SourceSansPro Bold';
 }

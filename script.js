@@ -1,21 +1,12 @@
 var sections = ["#about", "#committees", "#creators", "#materials", "#history", "#contact"];
 var current_section = window.location.hash;
 
-// function animate_navbar(position) {
-// 	var header_outer = document.getElementById("header-outer"),
-// 	header_inner = document.getElementById("header-inner");
-// 	var header_outer_style = header.currentStyle || window.getComputedStyle(header_outer),
-// 	header_inner_style = header_inner.currentStyle || window.getComputedStyle(header_inner);
-
-// 	anim_rect = position.getBoundingClientRect();
-
-// 	document.getElementById("current_navbar_selection").style.width = position.clientWidth + "px";
-// 	document.getElementById("current_navbar_selection").style.marginLeft = (anim_rect.left - header_outer_style.marginLeft.replace("px", "") - header_inner_style.marginLeft.replace("px", "")) + "px";
-// 	document.getElementById("current_navbar_selection").style.marginTop = anim_rect.top + "px";
-// }
+function animate_navbar(position) {
+	var header_outer = document.getElementById("header-outer");
+}
 
 function goto(sender) {
-	//animate_navbar(sender);
+	animate_navbar(sender);
 	var next_section = sender.getAttribute("hash");
 	if (window.location.hash != next_section) {
 		change_section(next_section, true);
