@@ -48,8 +48,8 @@ table {
 }
 
 @font-face {
-	font-family: 'Montserrat Semibold';
-	src: url('fonts/Montserrat-Semibold.ttf');
+	font-family: 'Montserrat SemiBold';
+	src: url('fonts/Montserrat-SemiBold.ttf');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -164,7 +164,7 @@ body {
 }
 
 #title h1 {
-	font-family: 'Montserrat Semibold';
+	font-family: 'Montserrat SemiBold';
 	font-size: 38px;
 	text-align: right;
 	color: #1C6728;
