@@ -375,7 +375,7 @@ a:not(#lang_current, #header-outer a, h4 a, .button), p, li {
 	font-family: 'SourceSansPro Regular';
 }
 
-a:not(#lang_current, #header-outer a, h4 a, #creators a, .button), p {
+a:not(#lang_current, #header-outer a, h4 a, #creators a, .button, .next, .prev), p {
 	margin-left: 26px;
 }
 
@@ -506,6 +506,77 @@ a:not(#lang_current, #header-outer a, h4 a, .person > p, .button), p:not(#person
 	transition: 0.3s;
 }
 
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  text-align: center;
+}
+
+.mySlides > img {
+	margin: 0% auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 28px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 3px;
+  user-select: none;
+  margin-top: 0 -22px !important;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+.prev {
+	left: 0%;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
 #requirements-list-inner {
 	counter-reset: item;
 }
@@ -522,4 +593,21 @@ a:not(#lang_current, #header-outer a, h4 a, .person > p, .button), p:not(#person
 
 b {
 	font-family: 'SourceSansPro Bold';
+}
+
+p[name=committee] {
+	line-height: 2em;
+}
+
+p[name=committee] > span {
+	font-family: 'Montserrat Bold';
+}
+
+#header_selection_overlay {
+	height: 50px;
+	position: absolute;
+}
+
+#header_selection_overlay > * {
+	color: white !important;
 }

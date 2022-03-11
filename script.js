@@ -1,12 +1,35 @@
-var sections = ["#about", "#committees", "#creators", "#materials", "#history", "#contact"];
+var sections = ["#about", "#workshop", "#committees", "#creators", "#materials", "#history", "#contact"];
 var current_section = window.location.hash;
 
-function animate_navbar(position) {
-	var header_outer = document.getElementById("header-outer");
-}
+// function animate_navbar(position) {
+// 	var overlay = document.querySelector('#header_selection_overlay');
+// 	var overlay_contents = document.querySelector('#header_selection_overlay > *');
+
+// 	var next = document.getElementsByClassName(position.getAttribute("class"));
+// 	for (let i = 0; i < next.length; i++) {
+// 		if (window.getComputedStyle(next[i]).display === "none")
+// 			continue;
+// 		else
+// 			var clicked_button = next[i];
+// 			var clicked_button_style = getComputedStyle(clicked_button);
+// 	}
+
+// 	var rect = clicked_button.getBoundingClientRect();
+
+// 	$(overlay).show();
+// 	overlay.style.transition = '1s';
+// 	overlay.style.whiteSpace = 'nowrap';
+// 	overlay.style.overflow = 'hidden';
+
+// 	overlay.style.left = rect.left - 26 + "px";
+// 	console.log(rect.left);
+// 	overlay.style.width = rect.right - rect.left + "px";
+// 	overlay.style.height = rect.bottom - rect.top + "px";
+// 	overlay.style.backgroundColor = '#1C6728';
+// }
 
 function goto(sender) {
-	animate_navbar(sender);
+	//animate_navbar(sender);
 	var next_section = sender.getAttribute("hash");
 	if (window.location.hash != next_section) {
 		change_section(next_section, true);
@@ -43,8 +66,10 @@ function changeTransition(sender) {
 
 $(document).ready(function() {
 
-	//var navbar_selection = document.getElementById("current_navbar_selection");
-	//navbar_selection.style.height = "49px";
+	var overlay = document.querySelector('#header_selection_overlay');
+	var header = document.querySelector('#header-inner');
+	overlay.innerHTML = header.innerHTML;
+	$(overlay).hide();
 
 	lang_list = [];
 	lang_list[0] = document.querySelectorAll('[lang=en]');
@@ -71,7 +96,7 @@ $(document).ready(function() {
 		document.getElementById("lang_current").textContent = "EN";
 		var sw = true;
 	}
-	
+
 	$('#lang_current').click(function() {
 
 		if (sw === false) {

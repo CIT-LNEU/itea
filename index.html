@@ -19,8 +19,11 @@
 				<li class="about_button" lang="en" onclick="goto(this)" onmouseover="changeTransition(this)" hash="#about">About</li>
 				<li class="about_button" lang="ua" onclick="goto(this)" onmouseover="changeTransition(this)" hash="#about">Про конференцію</li>
 
-				<li class="committees_button" lang="en" onclick="goto(this)" onmouseover="changeTransition(this)" hash="#committees">Organizing Committees</li>
-				<li class="committees_button" lang="ua" onclick="goto(this)" onmouseover="changeTransition(this)" hash="#committees">Організаційні комітети</li>
+				<li class="workshop_button" lang="en" onclick="goto(this)" onmouseover="changeTransition(this)" hash="#workshop">Workshop</li>
+				<li class="workshop_button" lang="ua" onclick="goto(this)" onmouseover="changeTransition(this)" hash="#workshop">Семінар</li>
+
+				<li class="committees_button" lang="en" onclick="goto(this)" onmouseover="changeTransition(this)" hash="#committees">Committees</li>
+				<li class="committees_button" lang="ua" onclick="goto(this)" onmouseover="changeTransition(this)" hash="#committees">Комітети</li>
 
 				<li class="creators_button" lang="en" onclick="goto(this)" onmouseover="changeTransition(this)" hash="#creators">For Creators</li>
 				<li class="creators_button" lang="ua" onclick="goto(this)" onmouseover="changeTransition(this)" hash="#creators">Для авторів</li>
@@ -36,6 +39,8 @@
 
 				<li id="lang_current">EN</li>
 			</ul>
+			
+			<ul id="header_selection_overlay"></ul>
 		</div>
 	</div>
 
@@ -269,6 +274,11 @@
 				</div>
 			</div>
 
+			<div class="section" id="workshop">
+				<p lang="en" class="wip">Work in progress</p>
+				<p lang="ua" class="wip">У процесі розробки</p>
+			</div>
+
 			<div class="section" id="committees">
 				<h2 class="section_title" lang="en">Organizing Committees</h2>
 				<h2 class="section_title" lang="ua">Організаційні комітети</h2>
@@ -276,11 +286,51 @@
 				<h2 lang="en" class="subtitle"><span>Scientific Committee</span></h2>
 				<h2 lang="ua" class="subtitle"><span>Науковий комітет</span></h2>
 
-				<a lang="en" class="button" onmouseover="changeTransition(this)" target=”_blank” href="resources/ІТЕА Науковий комітет.docx">Download an information about Scientific Committee</a>
-				<a lang="ua" class="button" onmouseover="changeTransition(this)" target=”_blank” href="resources/ІТЕА Науковий комітет.docx">Завантажити інформацію про науковий комітет</a>
+				<p lang="en" name="committee">
+				<span>Anatoliy Sachenko D.Sc., Prof.</span> - Ternopil National Economic University<br>
+				<span>Anatoliy Tryhuba D.Sc., Prof.</span> - Lviv National Agrarian University<br>
+				<span>Andrzej Handkiewicz D.Sc., Prof.</span> - Poznan University of Technology<br>
+				<span>Erdal Kılıç PhD, Prof.</span> - Samsun Ondokuz Mayıs University<br>
+				<span>Grzegorz Andrzejewski PhD</span> - The Jacob of Paradies University<br>
+				<span>Jarosław Becker D.Sc.</span> - The Jacob of Paradies University<br>
+				<span>Kateryna Kolesnikova D.Sc., Prof.</span> - Taras Shevchenko National University of Kyiv<br>
+				<span>Kazimierz Krzywicki PhD</span> - The Jacob of Paradies University<br>
+				<span>Myroslav Komar D.Sc.</span> - West Ukrainian National University<br>
+				<span>Natalia Kunanets D.Sc., Prof.</span> - Lviv Polytechnic National University<br>
+				<span>Natalia Shakhovska D.Sc., Prof.</span> - Lviv Polytechnic National University<br>
+				<span>Oksana Boyarchuk PhD</span> - Lviv National Agrarian University<br>
+				<span>Slawomir Kurpaska D.Sc., Prof.</span> - University of Agriculture in Krakow<br>
+				<span>Vadym Ptashnyk PhD</span> - Lviv National Agrarian University<br>
+				<span>Volodymyr Golovko D.Sc., Prof.</span> - National Technical University of Ukraine "Igor Sikorsky Kyiv Polytechnic Institute"<br>
+				<span>Volodymyr Lytvynenko D.Sc., Prof.</span> - Kherson National Technical University<br>
+				<span>Yuriy Teslya D.Sc. Prof.</span> - Taras Shevchenko National University of Kyiv<br>
+				</p>
+
+				<p lang="ua" name="committee">
+				<span>Анатолій Саченко д.т.н., проф.</span> – Західноукраїнський національний університет<br>
+				<span>Анатолій Тригуба д.т.н., проф.</span> – Львівський національний аграрний університет<br>
+				<span>Анджей Гандкевич док. наук, проф.</span> - Познанський технологічний університет<br>
+				<span>Вадим Пташник к.т.н., доц.</span> – Львівський національний аграрний університет<br>
+				<span>Володимир Головко д.т.н., проф.</span> – Національний технічний університет України «Київський політехнічний інститут імені Ігоря Сікорського»<br>
+				<span>Володимир Литвиненко д.т.н., проф.</span> – Херсонський національний технічний університет<br>
+				<span>Ґжегож Анджеєвський док. філ.</span> - Університет Якоба з Парадіза<br>
+				<span>Ердал Кіліч док. філ., проф.</span> - Університет Самсуна Ондокуза Майіса<br>
+				<span>Казімеж Кшивіцький док. філ.</span> - Університет Якоба з Парадіза<br>
+				<span>Катерина Колеснікова д.т.н. проф.</span> - Київський національний університет імені Тараса Шевченка<br>
+				<span>Мирослав Комар д.т.н.</span> – Львівський національний аграрний університет<br>
+				<span>Наталія Кунанець д.н.соц.ком., проф.</span> – Національний університет «Львівська політехніка»<br>
+				<span>Наталія Шаховська д.т.н., проф.</span> – Національний університет «Львівська політехніка»<br>
+				<span>Оксана Боярчук к.т.н.</span> – Західноукраїнський національний університет<br>
+				<span>Славомір Курпаска док. наук, проф.</span> - Сільськогосподарський університет імені Гуго Коллонтая у Кракові<br>
+				<span>Юрій Тесля д.т.н. проф.</span> - Київський національний університет імені Тараса Шевченка<br>
+				<span>Ярослав Беккер док. наук</span> – Університет Якоба з Парадіза<br>
+				</p>
 
 				<h2 lang="en" class="subtitle"><span>Program Committee</span></h2>
 				<h2 lang="ua" class="subtitle"><span>Програмний комітет</span></h2>
+
+				<p lang="en" class="wip">Work in progress</p>
+				<p lang="ua" class="wip">У процесі розробки</p>
 			</div>
 			
 			<div class="section" id="creators">
@@ -297,16 +347,16 @@
 				<ul lang="en">
 					<li>October 5 2021 <span>–</span> registration and abstract submission deadline.</li>
 					<li>October 8 2021 <span>–</span> recommendation for manuscript submission.</li>
-					<li>October 22 2021 <span>–</span> manuscript submission  deadline.</li>
-					<li>October 29 2021 <span>–</span> manuscript review  deadline.</li>
-					<li>November 5 2021 <span>–</span> camera ready manuscript submission deadline.</li>
+					<li>October 22 2021 <span>–</span> manuscript submission deadline.</li>
+					<li>January 31 2021 <span>–</span> manuscript review deadline.</li>
+					<li>February 6 2021 <span>–</span> camera ready manuscript submission deadline.</li>
 				</ul>
 				<ul lang="ua">
 					<li>До 5 жовтня 2021 <span>–</span> реєстрація та подання тез доповідей.</li>
 					<li>До 8 жовтня 2021 <span>–</span> рекомендація до подання розширених статей.</li>
 					<li>До 22 жовтня 2021 <span>–</span> подання розширених статей.</li>
-					<li>До 29 жовтня 2021 <span>–</span> рецензування розширених статей.</li>
-					<li>До 5 листопада 2021 <span>–</span> подання завершених статей.</li>
+					<li>До 31 січня 2022 <span>–</span> рецензування розширених статей.</li>
+					<li>До 6 лютого 2022 <span>–</span> подання завершених статей.</li>
 				</ul>
 
 				<h2 lang="en" class="subtitle"><span>Registration</span></h2>
@@ -362,13 +412,17 @@
 
 				<h2 lang="en" class="subtitle"><span>Review policy</span></h2>
 				<h2 lang="ua" class="subtitle"><span>Політика рецензування</span></h2>
-				<p lang="en" class="wip">Work in progress</p>
-				<p lang="ua" class="wip">У процесі розробки</p>
+				
+				<p lang="ua">Усі роботи проходять відкрите рецензування та перевірку на академічну доброчесність.
+Рецензування робіт виконують члени наукового комітету та запрошені рецензенти.</p>
+				<p lang="en">All papers are openly reviewed and tested for academic integrity.
+Papers are reviewed by members of the scientific committee and invited reviewers.</p>
 
 				<h2 lang="en" class="subtitle"><span>Organizational contributions</span></h2>
 				<h2 lang="ua" class="subtitle"><span>Організаційні внески</span></h2>
-				<p lang="en" class="wip">Work in progress</p>
-				<p lang="ua" class="wip">У процесі розробки</p>
+
+				<p lang="en">Participation in the conference is free.</p>
+				<p lang="ua">Участь у конференції - безкоштовна.</p>
 			</div>
 
 			<div class="section" id="materials">
@@ -405,18 +459,19 @@
 				<h2 lang="ua" class="subtitle"><span>Фотогалерея</span></h2>
 				
 				<div id="slide">
-				  <div class="slideshow-container">
-				  	<div class="mySlides fade" style="width: 100%"> <img src="images/gallery/1.jpg" style="height: 500px"> </div>
-				  	<div class="mySlides fade" style="width: 100%"> <img src="images/gallery/2.jpg" style="height: 500px"> </div>
-				  	<div class="mySlides fade" style="width: 100%"> <img src="images/gallery/3.jpg" style="height: 500px"> </div>
-				  	<div class="mySlides fade" style="width: 100%"> <img src="images/gallery/4.jpg" style="height: 500px"> </div>
-				  	<div class="mySlides fade" style="width: 100%"> <img src="images/gallery/5.jpg" style="height: 500px"> </div>
-				  	<div class="mySlides fade" style="width: 100%"> <img src="images/gallery/6.jpg" style="height: 500px"> </div>
-				  	<div class="mySlides fade" style="width: 100%"> <img src="images/gallery/7.jpg" style="height: 500px"> </div>
-				  	<div class="mySlides fade" style="width: 100%"> <img src="images/gallery/8.jpg" style="height: 500px"> </div>
-				  	<div class="mySlides fade" style="width: 100%"> <img src="images/gallery/9.jpg" style="height: 500px"> </div>
-				  	<a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next" onclick="plusSlides(1)">&#10095;</a>
-				  </div>
+					<div class="slideshow-container">
+					  	<div class="mySlides fade" style="width: 100%"> <img src="images/gallery/1.jpg" style="height: 500px"> </div>
+					  	<div class="mySlides fade" style="width: 100%"> <img src="images/gallery/2.jpg" style="height: 500px"> </div>
+					  	<div class="mySlides fade" style="width: 100%"> <img src="images/gallery/3.jpg" style="height: 500px"> </div>
+					  	<div class="mySlides fade" style="width: 100%"> <img src="images/gallery/4.jpg" style="height: 500px"> </div>
+					  	<div class="mySlides fade" style="width: 100%"> <img src="images/gallery/5.jpg" style="height: 500px"> </div>
+					  	<div class="mySlides fade" style="width: 100%"> <img src="images/gallery/6.jpg" style="height: 500px"> </div>
+					  	<div class="mySlides fade" style="width: 100%"> <img src="images/gallery/7.jpg" style="height: 500px"> </div>
+					  	<div class="mySlides fade" style="width: 100%"> <img src="images/gallery/8.jpg" style="height: 500px"> </div>
+					  	<div class="mySlides fade" style="width: 100%"> <img src="images/gallery/9.jpg" style="height: 500px"> </div>
+					  	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				  	</div>
 					<br>
 					<div style="text-align:center"> 
 						<span class="dot" onclick="currentSlide(1)"></span> 
@@ -518,7 +573,7 @@
 							<a href="mailto:nekigami@lnau.edu.ua">nekigami@lnau.edu.ua</a>
 						</div>
 						<div>
-							<p>Відділ комп'ютерно-інформаційних технологій</p>
+							<p>Відділ комп'ютерних інформаційних технологій</p>
 							<p>Львівський національний аграрний університет</p>
 							<p>80381, Львів-Дубляни, вул. В. Великого, 1</p>
 							<a href="mailto:kit@lnau.edu.ua">kit@lnau.edu.ua</a>
