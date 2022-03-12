@@ -303,6 +303,16 @@ body {
 	}
 }
 
+@media screen and (orientation: landscape) {
+	.high_contrast {
+		background: -webkit-linear-gradient(left,
+    #1C6728 80%,
+    rgba(255,255,255,0.9) 100%
+  	) !important;
+	padding-right: 10% !important;
+	}
+}
+
 @media screen and (orientation: portrait) {
 	.section_title {
 		background: -webkit-linear-gradient(left,
@@ -595,11 +605,11 @@ b {
 	font-family: 'SourceSansPro Bold';
 }
 
-p[name=committee] {
+p[name=committee], p[name=workshop_edited_by] {
 	line-height: 2em;
 }
 
-p[name=committee] > span {
+p[name=committee] > span, p[name=workshop_edited_by] > span {
 	font-family: 'Montserrat Bold';
 }
 
@@ -610,4 +620,16 @@ p[name=committee] > span {
 
 #header_selection_overlay > * {
 	color: white !important;
+}
+
+div[name=credits] {
+	width: fit-content;
+	display: block;
+	margin-left: auto !important;
+	margin-right: 0 !important;
+	margin-top: 42px !important;
+}
+
+div[name=credits] > p {
+	font-family: 'Montserrat SemiBold';
 }
