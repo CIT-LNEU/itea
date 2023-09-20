@@ -1,40 +1,28 @@
 var sections = ["#about", "#workshop", "#committees", "#creators", "#materials", "#history", "#contact"];
 var current_section = window.location.hash;
-
-// function animate_navbar(position) {
-// 	var overlay = document.querySelector('#header_selection_overlay');
-// 	var overlay_contents = document.querySelector('#header_selection_overlay > *');
-
-// 	var next = document.getElementsByClassName(position.getAttribute("class"));
-// 	for (let i = 0; i < next.length; i++) {
-// 		if (window.getComputedStyle(next[i]).display === "none")
-// 			continue;
-// 		else
-// 			var clicked_button = next[i];
-// 			var clicked_button_style = getComputedStyle(clicked_button);
-// 	}
-
-// 	var rect = clicked_button.getBoundingClientRect();
-
-// 	$(overlay).show();
-// 	overlay.style.transition = '1s';
-// 	overlay.style.whiteSpace = 'nowrap';
-// 	overlay.style.overflow = 'hidden';
-
-// 	overlay.style.left = rect.left - 26 + "px";
-// 	console.log(rect.left);
-// 	overlay.style.width = rect.right - rect.left + "px";
-// 	overlay.style.height = rect.bottom - rect.top + "px";
-// 	overlay.style.backgroundColor = '#1C6728';
-// }
+var reset_buffer;
 
 function goto(sender) {
-	//animate_navbar(sender);
 	var next_section = sender.getAttribute("hash");
 	if (window.location.hash != next_section) {
 		change_section(next_section, true);
+		color_active_button(sender, next_section)
 	}
 }
+
+function color_active_button(sender, next_section) {
+	sender.style.transition = "0.8s"
+	sender.style.backgroundColor = "#1C6728";
+	sender.style.color = "white";
+	for (var i = 0; i < reset_buffer.length; i++) {
+		if (reset_buffer[i].getAttribute("hash") === next_section) {
+			continue;
+		}
+		reset_buffer[i].style.transition = "0.8s"
+		reset_buffer[i].style.backgroundColor = "transparent";
+		reset_buffer[i].style.color = "#1C6728";
+	}
+};
 
 function change_section(section, animate) {
 	window.location.hash = section;
@@ -65,7 +53,7 @@ function changeTransition(sender) {
 }
 
 $(document).ready(function() {
-
+	reset_buffer = document.querySelectorAll('#header-inner li');
 	var overlay = document.querySelector('#header_selection_overlay');
 	var header = document.querySelector('#header-inner');
 	overlay.innerHTML = header.innerHTML;
@@ -74,12 +62,17 @@ $(document).ready(function() {
 	lang_list = [];
 	lang_list[0] = document.querySelectorAll('[lang=en]');
 	lang_list[1] = document.querySelectorAll('[lang=ua]');
-
+	console.log(lang_list)
+	
+	var start_page;
+	
 	if (window.location.hash === '') {
 		change_section("#about", false);
+		start_page = true; 
 	}
 	else {
-	  change_section(window.location.hash);
+		change_section(window.location.hash);
+		start_page = false;
 	}
 
 	//Translate the site
@@ -89,12 +82,32 @@ $(document).ready(function() {
 		$('[lang="en"]').hide();
 		document.getElementById("lang_current").textContent = "UK";
 		var sw = false;
+		if (start_page) {
+			current_button = document.querySelector('[hash="#about"][lang="ua"]');
+			console.log(current_button)
+			color_active_button(current_button, "#about")
+		}
+		else {
+			current_button = document.querySelector(`[hash="${window.location.hash}"][lang="ua"]`)
+			console.log(current_button)
+			color_active_button(current_button, window.location.hash)
+		}
 	}
 	else
 	{
 		$('[lang="ua"]').hide();
 		document.getElementById("lang_current").textContent = "EN";
 		var sw = true;
+		if (start_page) {
+			current_button = document.querySelector('[hash="#about"][lang="en"]');
+			console.log(current_button)
+			color_active_button(current_button, "#about")
+		}
+		else {
+			current_button = document.querySelector(`[hash="${window.location.hash}"][lang="en"]`)
+			console.log(current_button)
+			color_active_button(current_button, window.location.hash)
+		}
 	}
 
 	$('#lang_current').click(function() {
@@ -106,6 +119,8 @@ $(document).ready(function() {
 			for (var i = 0; i < lang_list[1].length; i++) {
 				$(lang_list[1][i]).hide();
 			}
+			current_button = document.querySelector(`[hash="${window.location.hash}"][lang="en"]`)
+			color_active_button(current_button, window.location.hash)
 			for (var i = 0; i < lang_list[0].length; i++) {
 				lang_list[0][i].style.opacity = '0';
 				lang_list[0][i].style.left = '50px';
@@ -123,6 +138,8 @@ $(document).ready(function() {
 			for (var i = 0; i < lang_list[0].length; i++) {
 				$(lang_list[0][i]).hide();
 			}
+			current_button = document.querySelector(`[hash="${window.location.hash}"][lang="ua"]`)
+			color_active_button(current_button, window.location.hash)
 			for (var i = 0; i < lang_list[1].length; i++) {
 				lang_list[1][i].style.opacity = '0';
 				lang_list[1][i].style.left = '50px';

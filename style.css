@@ -442,14 +442,13 @@ a:not(#lang_current, #header-outer a, h4 a, .person > p, .button), p:not(#person
 	}
 }
 
-#contact a, #developer a {
+.text-link {
 	line-height: 40px;
-	margin: 26px;
 	text-decoration: none;
 	color: #1C6728;
 }
 
-#contact a:hover, #developer a:hover {
+.text-link:hover {
 	background-color: #1C6728;
 	color: white;
 	transition: 0.3s;
