@@ -443,7 +443,6 @@ a:not(#lang_current, #header-outer a, h4 a, .person > p, .button), p:not(#person
 }
 
 .text-link {
-	line-height: 40px;
 	text-decoration: none;
 	color: #1C6728;
 }
@@ -631,4 +630,33 @@ div[name=credits] {
 
 div[name=credits] > p {
 	font-family: 'Montserrat SemiBold';
+}
+
+#materials_container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(400px, 50%));
+	align-items: center;
+	justify-content: center;
+}
+
+.materials_item {
+	position: relative;
+	display: table;
+	margin-bottom: 40px;
+	/* height: 132px; */
+}
+
+/* .materials_item button {
+	position: relative !important;
+	width: 100% !important;
+} */
+
+.materials_year_title {
+	background: #1C6728;
+	padding: 3% 70px;
+	font-family: 'Montserrat Bold';
+	font-size: 22px;
+	color: white;
+	margin: 0 2% 26px 2%;
+	text-align: center;
 }

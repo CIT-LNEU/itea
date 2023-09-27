@@ -61,9 +61,7 @@ $(document).ready(function() {
 
 	lang_list = [];
 	lang_list[0] = document.querySelectorAll('[lang=en]');
-	lang_list[1] = document.querySelectorAll('[lang=ua]');
-	console.log(lang_list)
-	
+	lang_list[1] = document.querySelectorAll('[lang=ua]');	
 	var start_page;
 	
 	if (window.location.hash === '') {
@@ -84,12 +82,10 @@ $(document).ready(function() {
 		var sw = false;
 		if (start_page) {
 			current_button = document.querySelector('[hash="#about"][lang="ua"]');
-			console.log(current_button)
 			color_active_button(current_button, "#about")
 		}
 		else {
 			current_button = document.querySelector(`[hash="${window.location.hash}"][lang="ua"]`)
-			console.log(current_button)
 			color_active_button(current_button, window.location.hash)
 		}
 	}
@@ -100,12 +96,10 @@ $(document).ready(function() {
 		var sw = true;
 		if (start_page) {
 			current_button = document.querySelector('[hash="#about"][lang="en"]');
-			console.log(current_button)
 			color_active_button(current_button, "#about")
 		}
 		else {
 			current_button = document.querySelector(`[hash="${window.location.hash}"][lang="en"]`)
-			console.log(current_button)
 			color_active_button(current_button, window.location.hash)
 		}
 	}
