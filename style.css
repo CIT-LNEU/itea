@@ -639,17 +639,21 @@ div[name=credits] > p {
 	justify-content: center;
 }
 
-.materials_item {
+#materials_container > .materials_item {
 	position: relative;
 	display: table;
 	margin-bottom: 40px;
-	/* height: 132px; */
+	margin-left: auto;
+	margin-right: auto;
 }
 
-/* .materials_item button {
-	position: relative !important;
-	width: 100% !important;
-} */
+.materials_item:not(#materials_container > .materials_item) {
+	position: relative;
+	display: table;
+	margin-bottom: 40px;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 .materials_year_title {
 	background: #1C6728;
